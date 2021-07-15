@@ -73,3 +73,12 @@ $(document).ready(function () {
 
   new Animation(".animation-bar", "percentage");
 });
+
+function stickyTop() {
+  if (window.scrollY > 80) {
+    document.querySelector(".navbar").classList.add("navbar-custom-white");
+  } else {
+    document.querySelector(".navbar").classList.remove("navbar-custom-white");
+  }
+}
+window.addEventListener("scroll", stickyTop);
