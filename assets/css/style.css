@@ -230,6 +230,9 @@ button {
   transition: all 0.5s ease;
 }
 /* about me section css start  */
+.about-image img {
+  border-radius: 30px 30px 30px 140px;
+}
 
 .about-button-resume {
   border: 2px solid var(--primaryColor);
@@ -325,10 +328,18 @@ button {
   width: 62%;
 }
 .service-card {
-  border: 1px solid var(--borderColor);
+  /* border: 1px solid var(--borderColor); */
   border-radius: 5px;
+
   cursor: pointer;
   overflow: hidden;
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 5%);
+  background-color: #fff;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s,
+    translateX() 0.3s;
+  margin: 3%;
+  padding: 14%;
+  border-radius: 15px 15px 15px 70px;
 }
 .service-icon {
   /* text-align: center; */
@@ -365,4 +376,33 @@ button {
   /* text-align: center; */
   margin-bottom: 1rem;
   padding-bottom: 1rem;
+}
+/* contact css  */
+.contact-form input,
+.contact-form textarea {
+  border: none;
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 5%);
+  border: 1px solid transparent;
+  border-radius: 0 !important;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 5%);
+  border: 1px solid var(--borderColor);
+}
+
+.contact-form ::placeholder {
+  color: var(--borderColor) !important;
+}
+.contact-form ::-ms-input-placeholder {
+  color: red !important;
+}
+.contact-form :-ms-input-placeholder {
+  color: red !important;
+}
+.button-contact {
+  display: inline-block;
+  margin: auto;
+  width: auto;
+  padding: 0.5rem 4rem;
 }
