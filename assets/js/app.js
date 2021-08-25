@@ -1,4 +1,16 @@
 $(document).ready(function () {
+  // navbar sticky
+  function navbarStick() {
+    const navbar = document.querySelector(".navbar-custom");
+    window.addEventListener("scroll", () => {
+      if (scrollY > 80) {
+        navbar.classList.add("navbar-custom-white");
+      } else {
+        navbar.classList.remove("navbar-custom-white");
+      }
+    });
+  }
+  navbarStick();
   var Animation = function (animationBar, percentage) {
     this.animationBar = animationBar;
     this.percentage = percentage;
@@ -72,13 +84,54 @@ $(document).ready(function () {
   };
 
   new Animation(".animation-bar", "percentage");
-});
+  // portfolio filter
 
-function stickyTop() {
-  if (window.scrollY > 80) {
-    document.querySelector(".navbar").classList.add("navbar-custom-white");
-  } else {
-    document.querySelector(".navbar").classList.remove("navbar-custom-white");
-  }
-}
-window.addEventListener("scroll", stickyTop);
+  $(window).on("load", function () {
+    var b = $(".work-filter"),
+      c = $("#menu-filter");
+    b.isotope({
+      filter: "*",
+      layoutMode: "masonry",
+      animationOptions: { duration: 750, easing: "linear" },
+    }),
+      c.find("a").on("click", function () {
+        var a = $(this).attr("data-filter");
+        return (
+          c.find("a").removeClass("active"),
+          $(this).addClass("active"),
+          b.isotope({
+            filter: a,
+            animationOptions: {
+              animationDuration: 750,
+              easing: "linear",
+              queue: !1,
+            },
+          }),
+          !1
+        );
+      });
+  });
+
+  // tablinks open
+  // owl carousel
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: true,
+    freeDrag: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      991: {
+        items: 3,
+      },
+      1199: {
+        items: 4,
+      },
+    },
+  });
+});

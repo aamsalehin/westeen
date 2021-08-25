@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>westeen | Responsive One Page personal, agency html template</title>
+    <!-- mbrise icons  -->
+    <link rel="stylesheet" href="./assets/vendor/mobirise/style.css" />
     <!-- bootstrap css  -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
+    />
+    <!-- owl carousel css  -->
+    <link rel="stylesheet" href="./assets/vendor/css/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/vendor/css/owl.theme.default.min.css"
     />
     <!-- font awsome css  -->
     <link rel="stylesheet" href="./assets/css/all.css" />
@@ -70,28 +78,6 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
             </li>
-            <!-- <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown link
-              </a>
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li> -->
           </ul>
         </div>
       </div>
@@ -100,31 +86,52 @@
     <!-- intro section start  -->
     <section
       id="intro"
-      style="background-image: url(./assets/images/intro.jpeg)"
+      class="h-100 bg-cover"
+      style="background-image: url('./assets/images/intro.jpeg')"
     >
       <div class="bg-overlay-dark"></div>
-      <div class="intro-wrapper">
-        <div class="container z-index">
-          <div class="intro-text">
-            <p class="intro-sub h4 mb-4">welcome</p>
-            <h1 class="intro-heading h1">I am a Web Developer</h1>
-            <p class="intro-description py-4 m-auto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              consequuntur quis debitis mollitia impedit eum maxime accusantium
-              veritatis tempore fuga?
+      <div class="container z-index">
+        <div
+          class="
+            h-100
+            row
+            align-items-center
+            justify-content-center
+            text-center
+          "
+        >
+          <div class="wrapper z-index">
+            <h4 class="h4 fw-bold text-white mb-4">welcome</h4>
+            <h2 class="display-5 text-white fw-bold mb-3">
+              I am a web developer
+            </h2>
+            <p class="lh-base text-custom-light mw-500 m-auto">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+              repudiandae nesciunt quae nam, tenetur quidem.
             </p>
-            <a href="/" class="intro-button btn btn-lg">Get Started</a>
+            <button
+              class="
+                btn btn-lg btn-outline-light
+                rounded-pill
+                text-uppercase
+                fw-bold
+                mt-4
+              "
+            >
+              get started
+            </button>
           </div>
         </div>
       </div>
     </section>
     <!-- intro section end  -->
+
     <!-- about section start  -->
-    <section id="about" class="py-80">
+    <section id="about" class="py-100">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6">
-            <div class="about-image p-3">
+          <div class="col-lg-6 p-5">
+            <div class="about-image">
               <img
                 class="img-fluid"
                 src="https://images.pexels.com/photos/167964/pexels-photo-167964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
@@ -133,12 +140,12 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="about-text p-3">
+            <div class="p-3">
               <span class="section-span">About me</span>
-              <h2 class="aboout-heading section-heading h2">
+              <h2 class="text-dark text-capitalize h3 fw-bold mb-4">
                 Creative web designer based in New York, USA
               </h2>
-              <p>
+              <p class="text-muted fw-light">
                 I'm web designer, and I'm very passionate and dedicated to my
                 work.Officiis eligendi itaque labore et dolorum mollitia
                 officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla
@@ -148,26 +155,30 @@
                 quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis
                 culpa magni laudantium dolores.
               </p>
-              <button class="btn about-button-resume btn-lg mt-4">
-                Download resume <i class="fas fa-download"></i>
+              <button class="btn btn-custom btn-lg mt-4">
+                Download CV <i class="fas fa-download"></i>
+              </button>
+              <button class="btn btn-outline-custom btn-lg mt-4 ms-2">
+                See Work <i class="fas fa-images"></i>
               </button>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- about section end  -->
     <!-- skills start  -->
-    <section id="skills">
+    <section id="skills" class="py-80">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
             <div class="about-text p-3">
               <span class="section-span">Skills</span>
-              <h2 class="aboout-heading section-heading h2">
+              <h2 class="text-dark text-capitalize h3 fw-bold mb-3">
                 I have high skills in developing and programming
               </h2>
-              <p>
+              <p class="text-muted fw-light">
                 I am working on a professional, visually sophisticated and
                 technologically proficient, responsive and multi-functional
                 personal portfolio template Shane.
@@ -221,99 +232,78 @@
     </section>
     <!-- skills end  -->
     <!-- services section start  -->
-    <section id="services" class="py-50 light-bg">
+    <section id="services" class="py-80 light-bg">
       <div class="container">
-        <div class="service-heading">
-          <span class="section-span">Services</span>
-          <h2 class="aboout-heading section-heading h2">My Services</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-            incidunt.
-          </p>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="service-heading text-center">
+              <span class="section-span">Services</span>
+              <h2 class="fw-bold text-uppercase h3">My Services</h2>
+              <p class="text-muted lh-base">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+                incidunt.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="row mt-5 gx-5">
-          <div class="col-lg-4 col-md-6">
-            <div class="service-card mt-3 p-4">
+        <div class="row pt-5 p-3">
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card border-1">
               <div class="service-icon">
-                <i class="fas fa-binoculars fa-4x"></i>
+                <i class="fas fa-code fa-2x"></i>
               </div>
               <div class="service-text">
-                <h3 class="service-card-heading">Lorem, ipsum.</h3>
-                <p class="service-description small">
+                <h4 class="fw-bold h4 mb-3">Web Developement</h4>
+                <p class="fw-lighter lh-base text-muted">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Animi, laborum.
                 </p>
+                <a href="" class="mt-4 custom-link">read more...</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service-card mt-3 p-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card border-1">
               <div class="service-icon">
-                <i class="fas fa-briefcase-medical fa-4x"></i>
+                <i class="fas fa-code fa-2x"></i>
               </div>
               <div class="service-text">
-                <h3 class="service-card-heading">Lorem, ipsum.</h3>
-                <p class="service-description small">
+                <h4 class="fw-bold h4 mb-3">Web Developement</h4>
+                <p class="fw-lighter lh-base text-muted">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Animi, laborum.
                 </p>
+                <a href="" class="mt-4 custom-link">read more...</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service-card mt-3 p-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card border-1">
               <div class="service-icon">
-                <i class="fas fa-chart-area fa-4x"></i>
+                <i class="fas fa-code fa-2x"></i>
               </div>
               <div class="service-text">
-                <h3 class="service-card-heading">Lorem, ipsum.</h3>
-                <p class="service-description small">
+                <h4 class="fw-bold h4 mb-3">Web Developement</h4>
+                <p class="fw-lighter lh-base text-muted">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Animi, laborum.
                 </p>
+                <a href="" class="mt-4 custom-link">read more...</a>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="service-card mt-3 p-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card border-1">
               <div class="service-icon">
-                <i class="fas fa-chart-area fa-4x"></i>
+                <i class="fas fa-code fa-2x"></i>
               </div>
               <div class="service-text">
-                <h3 class="service-card-heading">Lorem, ipsum.</h3>
-                <p class="service-description small">
+                <h4 class="fw-bold h4 mb-3">Web Developement</h4>
+                <p class="fw-lighter lh-base text-muted">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Animi, laborum.
                 </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service-card mt-3 p-4">
-              <div class="service-icon">
-                <i class="fas fa-laptop-code fa-4x"></i>
-              </div>
-              <div class="service-text">
-                <h3 class="service-card-heading">Lorem, ipsum.</h3>
-                <p class="service-description small">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Animi, laborum.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service-card mt-3 p-4">
-              <div class="service-icon">
-                <i class="fas fa-clone fa-4x"></i>
-              </div>
-              <div class="service-text">
-                <h3 class="service-card-heading">Lorem, ipsum.</h3>
-                <p class="service-description small">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Animi, laborum.
-                </p>
+                <a href="" class="mt-4 custom-link">read more...</a>
               </div>
             </div>
           </div>
@@ -322,69 +312,544 @@
     </section>
     <!-- services section end  -->
     <!-- operate section start  -->
-    <section id="operate">operate</section>
+    <section id="operate"></section>
     <!-- operate section end  -->
     <!-- cta section start  -->
-    <section id="cta">cta</section>
+    <section id="cta" class="py-80">
+      <div class="container">
+        <div class="cta-wrapper z-index">
+          <h3 class="h3">Subscribe to be updated with my updated newsletter</h3>
+          <div class="form">
+            <div class="input-group justify-content-center">
+              <input type="text" placeholder="Enter Your Mail" />
+              <input type="submit" value="subscribe" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- cta section end  -->
     <!-- portfolio section start  -->
-    <section id="portfolio">portfolio</section>
+    <!-- START WORK -->
+    <section class="section text-center" id="portfolio">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="service-heading text-center">
+            <span class="section-span">Portfolio</span>
+            <h2 class="aboout-heading section-heading h2">My Gallery</h2>
+            <p class="text-muted lh-base">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              incidunt.
+            </p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <ul
+            class="col list-unstyled list-inline mb-0 text-uppercase work_menu"
+            id="menu-filter"
+          >
+            <li class="list-inline-item">
+              <a class="active" data-filter="*">All</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="" data-filter=".seo">Seo</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="" data-filter=".webdesign">Webdesign</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="" data-filter=".WORK">WORK</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="" data-filter=".wordpress">Wordpress</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row mt-4 work-filter">
+          <div class="col-lg-4 work_item webdesign wordpress">
+            <a href="./assets/images/intro.jpeg" class="img-zoom">
+              <div class="work_box">
+                <div class="work_img">
+                  <img
+                    src="./assets/images/intro.jpeg"
+                    class="img-fluid mx-auto d-block rounded"
+                    alt="work-img"
+                  />
+                </div>
+                <div class="work_detail">
+                  <p class="mb-2">Category</p>
+                  <h4 class="mb-0">Project Title</h4>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 work_item WORK webdesign seo">
+            <a href="./assets/images/intro.jpeg" class="img-zoom">
+              <div class="work_box">
+                <div class="work_img">
+                  <img
+                    src="./assets/images/intro.jpeg"
+                    class="img-fluid mx-auto d-block rounded"
+                    alt="work-img"
+                  />
+                </div>
+                <div class="work_detail">
+                  <p class="mb-2">Category</p>
+                  <h4 class="mb-0">Project Title</h4>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 work_item seo wordpress">
+            <a href="./assets/images/intro.jpeg" class="img-zoom">
+              <div class="work_box">
+                <div class="work_img">
+                  <img
+                    src="./assets/images/intro.jpeg"
+                    class="img-fluid mx-auto d-block rounded"
+                    alt="work-img"
+                  />
+                </div>
+                <div class="work_detail">
+                  <p class="mb-2">Category</p>
+                  <h4 class="mb-0">Project Title</h4>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 work_item wordpress WORK webdesign">
+            <a href="./assets/images/intro.jpeg" class="img-zoom">
+              <div class="work_box">
+                <div class="work_img">
+                  <img
+                    src="./assets/images/intro.jpeg"
+                    class="img-fluid mx-auto d-block rounded"
+                    alt="work-img"
+                  />
+                </div>
+                <div class="work_detail">
+                  <p class="mb-2">Category</p>
+                  <h4 class="mb-0">Project Title</h4>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 work_item seo webdesign">
+            <a href="./assets/images/intro.jpeg" class="img-zoom">
+              <div class="work_box">
+                <div class="work_img">
+                  <img
+                    src="./assets/images/intro.jpeg"
+                    class="img-fluid mx-auto d-block rounded"
+                    alt="work-img"
+                  />
+                </div>
+                <div class="work_detail">
+                  <p class="mb-2">Category</p>
+                  <h4 class="mb-0">Project Title</h4>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 work_item devlopment webdesign">
+            <a href="./assets/images/intro.jpeg" class="img-zoom">
+              <div class="work_box">
+                <div class="work_img">
+                  <img
+                    src="./assets/images/intro.jpeg"
+                    class="img-fluid mx-auto d-block rounded"
+                    alt="work-img"
+                  />
+                </div>
+                <div class="work_detail">
+                  <p class="mb-2">Category</p>
+                  <h4 class="mb-0">Project Title</h4>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- portfolio section end  -->
     <!-- testimonial section start  -->
-    <section id="testimonial">testimonial</section>
-    <!-- testimonial section end  -->
-    <!-- pricing section start  -->
-    <section id="pricing">intro</section>
-    <!-- pricing section end  -->
-    <!-- blogs section start  -->
-    <section id="blogs">blogs</section>
-    <!-- blogs section end  -->
-    <!-- trusted section start  -->
-    <section id="trusted">trusted</section>
-    <!-- trusted section end  -->
-    <section id="contact" class="py-80 light-bg">
+    <!-- <section id="testimonial" class="py-100 light-bg">
       <div class="container">
-        <div class="contact-heading p-3">
-          <span class="section-span">Contact</span>
-          <h2 class="aboout-heading section-heading h2">Write Me</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-            incidunt.
-          </p>
+        <div class="row">
+          <div class="col-lg-6">
+            <span class="section-span">Testimonials</span>
+            <h2 class="aboout-heading section-heading">
+              What They Say About Me
+            </h2>
+            <p class="text-muted lh-lg">
+              I'm web designer, and I'm very passionate and dedicated to my
+              work.Officiis eligendi itaque labore et dolorum mollitia officiis
+              optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium
+              dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta
+              maxime officiis quidem quia. Sed et consectetur qui quia
+              repellendus itaque neque. Aliquid amet quidem ut quaerat
+              cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium
+              dolores.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="testimonial-wrapper">
+              <div
+                id="carouselExampleControls"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="testimonials-card">
+                      <p class="text-center lh-lg text-muted">
+                        <i class="fas fa-quote-left"></i>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Expedita aut delectus corporis quis incidunt unde
+                        blanditiis sapiente quia ullam minus.
+                        <i class="fas fa-quote-right"></i>
+                      </p>
+                      <div class="ratings text-center">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="testimonials-image">
+                      <img
+                        src="./assets/images/testimonials/salehin.jpg"
+                        alt="salehin"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="testimonials-name text-center">
+                      <h3>salehin</h3>
+                      <p class="text-lead fw-light">CEO</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="testimonials-card">
+                      <p class="lh-large text-center">
+                        <i class="fas fa-quote-left"></i>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Aliquid, possimus recusandae laudantium
+                        repudiandae repellat aliquam perferendis obcaecati! Hic,
+                        quis. Deserunt, molestiae.
+                        <i class="fas fa-quote-right"></i>
+                      </p>
+                      <div class="ratings text-center">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="testimonials-image">
+                      <img
+                        src="./assets/images/testimonials/salehin.jpg"
+                        alt="salehin"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="testimonials-name text-center">
+                      <h3>galib</h3>
+                      <p class="text-lead fw-light">CTO</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="testimonials-card">
+                      <p class="lh-large text-center">
+                        <i class="fas fa-quote-left"></i>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Aliquid,
+                        <i class="fas fa-quote-right"></i>
+                      </p>
+                      <div class="ratings text-center">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="testimonials-image">
+                      <img
+                        src="./assets/images/testimonials/salehin.jpg"
+                        alt="salehin"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="testimonials-name text-center">
+                      <h3>salehin</h3>
+                      <p class="text-lead fw-light">CEO</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button
+                    class="btn fas fa-long-arrow-alt-left"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev"
+                  ></button>
+                  <button
+                    class="btn fas fa-long-arrow-alt-right"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- testimonial section end  -->
+    <!-- testimonial section start  -->
+    <section id="testimonial" class="py-100 light-bg">
+      <div class="container">
+        <div class="row">
+          <div class="container">
+            <div class="about-text text-center p-3 mb-5">
+              <span class="section-span">Testimonials</span>
+              <h2 class="aboout-heading section-heading h2">
+                What They Say About Us
+              </h2>
+              <p class="text-muted lh-lg">
+                I am working on a professional, visually sophisticated and
+                technologically proficient, responsive and multi-functional
+                personal portfolio template Shane.
+              </p>
+            </div>
+          </div>
         </div>
         <div class="row">
-          <div class="col-12">
-            <div class="contact-info-wrapper p-3">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="icon-box p-5 mb-3">
-                    <div class="icon mb-3 me-3">
-                      <i class="fas fa-map-marker-alt fa-3x"></i>
+          <div class="col-lg-12 p-3">
+            <div class="owl-carousel owl-theme">
+              <div class="item">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="blockquote">
+                      <p class="lh-base fw-lighter text-muted text-center">
+                        <i class="fas fa-quote-left text-light"></i>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Perferendis excepturi fuga doloremque voluptatibus
+                        <i class="fas fa-quote-right text-light"></i>
+                      </p>
                     </div>
-                    <p>801/A,Rahim Tower, Subhanighta</p>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="icon-box p-5 mb-3">
-                    <div class="icon mb-3 me-3">
-                      <i class="fas fa-phone fa-3x"></i>
+                    <div
+                      class="blockquote-details d-flex justify-content-center"
+                    >
+                      <div class="image me-3">
+                        <img
+                          src="./assets/images/intro.jpeg"
+                          class="img-fluid"
+                          style="height: 50px; width: 50px"
+                          alt=""
+                        />
+                      </div>
+                      <div class="name">
+                        <h4 class="h5 fw-bold mb-0 pb-0">salehin</h4>
+                        <p class="text-muted small">ceo</p>
+                      </div>
                     </div>
-                    <p><a href="">+8801740372692</a></p>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="icon-box p-5 mb-3">
-                    <div class="icon mb-3 me-3">
-                      <i class="fas fa-envelope fa-3x"></i>
-                    </div>
-                    <p><a href="">aamsalehin@gmail.com</a></p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-12">
-            <div class="contact-form-wrapper p-3">
+        </div>
+      </div>
+    </section>
+    <!-- testimonial section end  -->
+    <!-- pricing section start  -->
+    <section id="pricing" class="py-100">
+      <div class="container">
+        <div class="row p-md-5">
+          <div class="col-lg-12 text-center mb-5">
+            <div class="about-text p-3">
+              <span class="section-span">Pricing</span>
+              <h2 class="aboout-heading section-heading h2">
+                Have a project in your mind
+              </h2>
+              <p class="text-muted lh-lg">
+                I am working on a professional, visually sophisticated and
+                technologically proficient, responsive and multi-functional
+                personal portfolio template Shane.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card pricing-card">
+              <div
+                class="card-header text-center h3 fw-bold text-capitalize py-3"
+              >
+                primary
+              </div>
+              <div class="card-body text-center">
+                <div class="display-6 py-4">$100</div>
+                <ul>
+                  <li>
+                    <i class="far fa-check-circle text-success me-2"></i>An item
+                  </li>
+                  <li>
+                    <i class="far fa-check-circle text-success me-2"></i>A
+                    second item
+                  </li>
+                  <li>
+                    <i class="far fa-check-circle text-success me-2"></i>A third
+                    item
+                  </li>
+                  <li>
+                    <i class="far fa-check-circle text-success me-2"></i>A
+                    fourth item
+                  </li>
+                  <li>
+                    <i class="far fa-check-circle text-success me-2"></i>And a
+                    fifth one
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-custom btn-lg m-auto d-block">
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card pricing-card card-primary">
+              <div
+                class="card-header text-center h3 fw-bold text-capitalize py-3"
+              >
+                primary
+              </div>
+              <div class="card-body text-center">
+                <div class="display-6 py-4">$450</div>
+                <ul>
+                  <li>
+                    <i class="far fa-check-circle text-success me-2"></i>An item
+                  </li>
+                  <li>
+                    <i class="far fa-check-circle text-success me-2"></i>A
+                    second item
+                  </li>
+                  <li>
+                    <i class="far fa-check-circle text-success me-2"></i>A third
+                    item
+                  </li>
+                  <li>
+                    <i class="far fa-check-circle text-success me-2"></i>A
+                    fourth item
+                  </li>
+                  <li>
+                    <i class="far fa-check-circle text-success me-2"></i>And a
+                    fifth one
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-custom btn-lg m-auto d-block">
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card pricing-card">
+              <div
+                class="card-header text-center h3 fw-bold text-capitalize py-3"
+              >
+                primary
+              </div>
+              <div class="card-body text-center">
+                <div class="display-6 py-4">$800</div>
+                <ul>
+                  <li>
+                    <i class="far fa-check-circle text-success me-2"></i>An item
+                  </li>
+                  <li>
+                    <i class="far fa-check-circle text-success me-2"></i>A
+                    second item
+                  </li>
+                  <li>
+                    <i class="far fa-check-circle text-success me-2"></i>A third
+                    item
+                  </li>
+                  <li>
+                    <i class="far fa-check-circle text-success me-2"></i>A
+                    fourth item
+                  </li>
+                  <li>
+                    <i class="far fa-check-circle text-success me-2"></i>And a
+                    fifth one
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-custom btn-lg m-auto d-block">
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- pricing section end  -->
+    <!-- blogs section start  -->
+
+    <!-- blogs section end  -->
+
+    <section id="contact" class="py-100">
+      <div class="container">
+        <div class="contact-heading text-center">
+          <span class="section-span">Contact</span>
+          <h2 class="aboout-heading section-heading h2">Write Me</h2>
+          <p>
+            Lorem ipsum dolorsit amet consectetur adipisicing elit. Neque,
+            incidunt.
+          </p>
+        </div>
+        <div class="row pt-5">
+          <div class="col-lg-12 p-3">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="contact-icon-box text-center mb-3 p-3">
+                  <i class="fas fa-envelope"></i>
+                  <h5 class="h5 m-0">email us at</h5>
+                  <p class="text-muted">aamsalehiin@gmail.com</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="contact-icon-box text-center mb-3 p-3">
+                  <i class="fas fa-phone-alt"></i>
+                  <h5 class="h5 m-0">call us at</h5>
+                  <p class="text-muted">+8801234567789</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="contact-icon-box text-center p-3">
+                  <i class="fas fa-location-arrow"></i>
+                  <h5 class="h5 m-0">find us at</h5>
+                  <p class="text-muted">801/A, Rahim Tower</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 p-3">
+            <div class="contact-form-wrapper">
               <form action="" class="form contact-form">
                 <div class="pb-3">
                   <input
@@ -420,18 +885,15 @@
                       class="form-control"
                       name=""
                       id=""
-                      cols="30"
-                      rows="10"
+                      cols="10"
+                      rows="5"
                       placeholder="Message"
                     ></textarea>
                   </div>
-                  <a
-                    href="/"
-                    class="btn about-button-resume button-contact btn-lg"
-                  >
-                    Submit <i class="fas fa-paper-plane"></i>
-                  </a>
                 </div>
+                <button class="btn btn-custom text-center ms-auto d-block">
+                  Submit <i class="fas fa-paper-plane"></i>
+                </button>
               </form>
             </div>
           </div>
@@ -440,10 +902,12 @@
     </section>
 
     <!-- footer section start  -->
-    <footer id="footer">footer</footer>
+
     <!-- footer section end  -->
 
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/vendor/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/isotope.pkgd.min.js"></script>
     <script src="./assets/js/app.js"></script>
 
     <script
