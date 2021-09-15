@@ -9,6 +9,7 @@
 @media (max-width: 991.98px) {
   .navbar-custom {
     background-color: white;
+    height: auto;
   }
   .nav-link,
   .logo {

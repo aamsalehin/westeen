@@ -11,6 +11,51 @@ $(document).ready(function () {
     });
   }
   navbarStick();
+  //counter animation
+  const counterSection = document.querySelector(".counter");
+  function animateCounter() {
+    const counters = document.querySelectorAll(".counter");
+    const speed = 200; // The lower the slower
+
+    counters.forEach((counter) => {
+      const updateCount = () => {
+        const target = +counter.getAttribute("data-target");
+        const count = +counter.innerText;
+
+        // Lower inc to slow and higher to slow
+        const inc = target / speed;
+
+        // console.log(inc);
+        // console.log(count);
+
+        // Check if target is reached
+        if (count < target) {
+          // Add inc to count and output in counter
+          counter.innerText = count + inc;
+          // Call function every ms
+          setTimeout(updateCount, 100);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      const countBack = () => {
+        counter.innerText = 0;
+      };
+
+      window.addEventListener("scroll", () => {
+        const counterPos = counterSection.getBoundingClientRect().top;
+        const screenPos = window.innerHeight;
+        if (counterPos < screenPos) {
+          updateCount();
+        } else {
+          countBack();
+        }
+      });
+    });
+  }
+  animateCounter();
+
+  // progress bar animation
   var Animation = function (animationBar, percentage) {
     this.animationBar = animationBar;
     this.percentage = percentage;
@@ -84,6 +129,36 @@ $(document).ready(function () {
   };
 
   new Animation(".animation-bar", "percentage");
+
+  // progress bar
+
+  function animateProgressBar() {
+    const progressSection = document.querySelector(".progress");
+    const progressBar = document.querySelectorAll(".progress-bar");
+    const showProgress = () => {
+      progressBar.forEach((p) => {
+        const value = p.dataset.progress;
+        p.style.opacity = "1";
+        p.style.width = `${value}%`;
+      });
+    };
+    const hideProgress = () => {
+      progressBar.forEach((p) => {
+        p.style.opacity = "0";
+        p.style.width = `0`;
+      });
+    };
+    window.addEventListener("scroll", () => {
+      const progressPosition = progressSection.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight;
+      if (progressPosition < screenPosition) {
+        showProgress();
+      } else {
+        hideProgress();
+      }
+    });
+  }
+  animateProgressBar();
   // portfolio filter
 
   $(window).on("load", function () {

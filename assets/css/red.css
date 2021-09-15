@@ -1,0 +1,21 @@
+:root {
+  --primaryColor: #f87171;
+  --primary-04: rgba(248, 113, 113, 0.04);
+  --primary-04: #fef2f2;
+  --primary-500: rgba(248, 113, 113, 0.5);
+  --secondaryColor: rgba(248, 113, 113, 0.05);
+  --secondaryColor: #fef2f2;
+  --headingColor: #111;
+  --paragraphColor: #6c757d;
+  --whiteColor: #fff;
+  --lightColor: #767676;
+  --lightBgColor: #f8fafa;
+  --lightBgColor: #f8fafa;
+  --lightBgColor: rgb(248, 248, 248);
+  --borderColor: #fef2f2;
+  --primarySoftBgColor: #fef2f2;
+  --white-750: rgba(255, 255, 255, 0.75);
+  --spanBgColor: rgba(58, 60, 70, 0.05);
+  --footerColor: #21272c;
+  --linkColorActive: #f87171;
+}
