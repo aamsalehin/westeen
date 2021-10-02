@@ -11,7 +11,9 @@
   --lightColor: #767676;
   --lightBgColor: #f8fafa;
   --lightBgColor: #f8fafa;
+
   --lightBgColor: rgb(248, 248, 248);
+  --lightBgColor: #f5f7fd;
   --borderColor: #fef2f2;
   --primarySoftBgColor: #fef2f2;
   --white-750: rgba(255, 255, 255, 0.75);
